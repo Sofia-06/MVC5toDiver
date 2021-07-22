@@ -3,14 +3,14 @@
     {
        function __construct()
        {
-            $servidor="";
+            $servidor="localhost";
             $pass="";
-            $user="";
-            $DB="";
+            $user="root";
+            $DB="inventariosm";
             
             parent::__construct($servidor,$user,$pass,$DB);
             $this->query("SET NAMES 'utf8'; ");
-            $this->connect_errno ? die('Error en la conexión'): $error="Conectado a ".$DB;
+            $this->connect_errno ? die('Error en la conexion'): $error="Conectado a ".$DB;
             //echo $error;
        }     
     }

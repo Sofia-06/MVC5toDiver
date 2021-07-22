@@ -1,7 +1,24 @@
+{include file="templates/Cabeceras/Header.tpl"}
+
     <style>
-    body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #fd7e1b;
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fd7e1b;
+
+        .header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 50px;
+            padding: 5px 13px 11px 0px;
+            width: 100%;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 0px;
+            bottom: 0;
+            background-color: #298dba;
+        }
     }
     </style>
     <div class="container">
@@ -34,4 +51,4 @@
           </div>   
         </form>
     </div>
-
+{include file="templates/Cabeceras/Footer.tpl"}
