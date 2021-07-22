@@ -24,5 +24,12 @@
     {
        echo "clase o metodo no existe"; 
     }
-    
+    if($Inicio >=true)
+    {
+        echo "Bienvenido";
+    }
+    else
+    {
+        echo "Intente de nuevo";
+    }
 ?>
