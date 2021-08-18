@@ -1,54 +1,36 @@
-{include file="templates/Cabeceras/Header.tpl"}
+{include file="Cabeceras/Header.tpl"}
 
-    <style>
-        body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: violet;
-
-        .header {
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            height: 50px;
-            padding: 5px 13px 11px 0px;
-            width: 100%;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            margin-top: 0px;
-            bottom: 0;
-            background-color: #298dba;
-        }
-    }
-    </style>
-    <div class="container">
-        <div class="row">
-            <div class="input-field col s12">
-               
-                    <h1 class=" center-align  blue-text">REGISTRO</h1>
-               
-            </div>
-        </div>
-               
-    
-        <form method="post" action="?class=user&method=login">
-            <div class="row">
-                <div class="input-field col s4">
-                    <input  name="nombre" id="first_name2" type="text" class="validate"/>
-                    <label class="active" for="first_name2">Nombre</label>
-                </div>
-            
-                <div class="input-field col s4">
-                    <input  name="pass" id="first_name3" type="password" class="validate"/>
-                    <label class="active" for="first_name3">Password</label>
-                </div>
-          </div>
-          
-          <div class="row">
-              <div class="input-field col s4">
-                <input class="waves-effect waves-light btn" type="submit" value="Enviar"/>
-              </div> 
-          </div>   
-        </form>
+    <div>
+        <h1 align="center">INGRESO</h1>
+        {if isset($msn)}
+            <h1>{$msn}</h1>
+        {else}
+            <h1>Hola</h1>
+        {/if}
     </div>
-{include file="templates/Cabeceras/Footer.tpl"}
+
+    <div class="row" align="center">
+        <form method="post" action="?controller=User&method=BuscarUsuario" class="col s4">
+
+            <div class="row">
+                <div class="input-field col s12">
+                   <input id="user" type="text" class="validate" required="" name="user"/>
+                   <label for="user">User</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                   <input id="password" type="password" class="validate" required="" name="pass"/>
+                   <label for="password">Password</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                   <input class="btn waves-effect waves-light" type="submit" name="action"/>
+                   <label for="password">Password</label>
+                </div>
+            </div>
+    </div>
+{include file="Cabeceras/Footer.tpl"}

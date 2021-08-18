@@ -1,35 +1,26 @@
 <?php
-    include('Autoload.php');
-    
+    require_once('Autoload.php');
 
-	if(isset($_GET['class'])&& isset($_GET['method']))
+	if(isset($_GET['controller']) && isset($_GET['method']))
     {
-       $class=$_GET['class'];
+       $controller=$_GET['controller'];
        $method=$_GET['method'];
     }
     else
     {
-        $class="Home";
+        $controller="Home";
         $method="Inicio";
     }
     //echo $class."---".$method."<br />";
     
-    if(class_exists($class) && method_exists($class, $method))
+    if(class_exists($controller) && method_exists($controller, $method))
     {
-        $c =new $class();//$c=new User()
-        $c->$method();//$c->Delet()
+        $class =new $controller();//$c=new User()
+        $class->$method();//$c->Delet()
     }
-    
     else
     {
        echo "clase o metodo no existe"; 
     }
-    if($Inicio >=true)
-    {
-        echo "Bienvenido";
-    }
-    else
-    {
-        echo "Intente de nuevo";
-    }
+    
 ?>
