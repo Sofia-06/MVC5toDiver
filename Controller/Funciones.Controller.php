@@ -1,19 +1,14 @@
 <?php
-	Class Home
+    Class Funciones
     {
         public $smarty;
-        public $con;
-
         public function __construct()
         {
             $this->smarty=new Smarty();
-            $this->con=new Conexion();
         }
 
-        public function Inicio()
+        public function Salir()
         {
-            $this->smarty->assign('title','login');
             $this->smarty->display('Home.tpl');
         }
     }
-?>

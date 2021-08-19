@@ -9,7 +9,7 @@
             $BaseDatos="inventario5todiver";
             
             parent::__construct($servidor,$user,$pass,$BaseDatos);
-            $this->query("SET NAMES 'utf8'; ");
+            $this->query("SET NAMES 'utf8';");
             $this->connect_errno ? die('Error en la conexion'): $error='</br>Conectado '.$BaseDatos;
             unset($error);
             //echo $error;

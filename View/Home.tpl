@@ -10,7 +10,7 @@
     </div>
 
     <div class="row" align="center">
-        <form method="post" action="?controller=User&method=BuscarUsuario" class="col s4">
+        <form method="post" action="" class="col s4">
 
             <div class="row">
                 <div class="input-field col s12">

@@ -25,6 +25,7 @@
                 )
                 if($arr[0]['Rol_idRol']==1)
                 {
+                    $this->smarty->assign('nav', 'admin');
                     $this->smarty->assign('title', 'Administrador');
                     $this->smarty->display('Administrador.tpl');
 

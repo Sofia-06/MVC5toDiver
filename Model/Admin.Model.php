@@ -10,9 +10,17 @@
 
         public function VerRol()
         {
-            $query="SELECT * FROM `rol` WHERE `Usuario`='$user' AND `Pass`='$pass';";
-            $consulta=$this->con->query($query);
+            $query="SELECT * FROM `rol`;";
+            $resultado=$this->con->query($query);
             $this->con->close();
-            return $consulta;
+            return $resultado;
+        }
+
+        public function CrearRol($nom, $desc)
+        {
+            $query="INSERT INTO `rol` (`Nombre`, `Descripcion`) VALUES ('$nom','$desc');";
+            $resultado=$this->con->query($query);
+            $this->con->close();
+            return $resultado;
         }
     }

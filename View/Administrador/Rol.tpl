@@ -1,5 +1,5 @@
 <div class="row " align="center">
-    <form method="post" action="?controller=method=" class="col s8">
+    <form method="post" action="?controller=Administrador&method=Rol" class="col s8">
         <div class="row">
             <div class="input-field col s8">
                 <input id="Nombre" type="text" class="validate" required="" name="Nombre"/>
