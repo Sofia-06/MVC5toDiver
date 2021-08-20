@@ -12,3 +12,4 @@
             $this->smarty->display('Home.tpl');
         }
     }
+?>

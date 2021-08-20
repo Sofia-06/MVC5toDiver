@@ -14,5 +14,5 @@
             require_once('Model/'.$class.'.Model.php');
        }
      }
-  spl_autoload_register('Autoload');
+     spl_autoload_register('Autoload');
 ?>

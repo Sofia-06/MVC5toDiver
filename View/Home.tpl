@@ -5,7 +5,7 @@
         {if isset($msn)}
             <h1>{$msn}</h1>
         {else}
-            <h1>Hola</h1>
+            <h1>Iniciar Sesión</h1>
         {/if}
     </div>
 
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="input-field col s12">
                    <input id="user" type="text" class="validate" required="" name="user"/>
-                   <label for="user">User</label>
+                   <label for="user">Nombre</label>
                 </div>
             </div>
 

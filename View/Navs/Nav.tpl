@@ -7,11 +7,12 @@
             <a href="?controller=DireccionNav&method=CrearMovimiento" class="collection-item">Crear Movimiento</a>
     
         {else if $nav='trabajador'}
-            <a href="#!" class="collection-item">Entra Inventario</a>
-            <a href="#!" class="collection-item">Salida Inventario</a>
+            <a href="?controller=DireccionNav&method=Entrada" class="collection-item">Entrada Inventario</a>
+            <a href="?controller=DireccionNav&method=Salida" class="collection-item">Salida Inventario</a>
         
         {else if $nav='encargado'}
-            <a href="#!" class="collection-item">Arturo</a>
+            <a href="?controller=DireccionNav&method=Entrada" class="collection-item">Entrada Inventario</a>
+            <a href="?controller=DireccionNav&method=Salida" class="collection-item">Salida Inventario</a>
         
         {/if}
     {/if}

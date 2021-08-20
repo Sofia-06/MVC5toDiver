@@ -16,6 +16,3 @@
         {/if}
       </title>  
     </head>
-
-    <body>
-    

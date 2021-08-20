@@ -12,6 +12,7 @@
 
         public function Rol()
         {
+            $this->smarty->assign('Nav', "admin");
             $this->smarty->assign('rol', "rol");
             $this->smarty->assign('title', 'Administrador');
             $this->smarty->display('Administrador.tpl');
@@ -31,4 +32,20 @@
             $this->smarty->assign('title', 'Administrador');
             $this->smarty->display('Administrador.tpl');
         }
+
+        public function Entrada()
+       {
+             $this->smarty->assign('Nav',"trabajador");
+             $this->smarty->assign('rol',"Entrada");
+             $this->smarty->assign('title', 'Trabajador');
+             $this->smarty->display('Trabajador.tpl');
+       }
+       public function Salida()
+       {
+             $this->smarty->assign('Nav',"trabajador");
+             $this->smarty->assign('rol',"salida");
+             $this->smarty->assign('title', 'Trabajador');
+             $this->smarty->display('Trabajador.tpl');
+       }
     }
+?>

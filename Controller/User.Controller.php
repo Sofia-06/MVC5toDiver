@@ -16,7 +16,7 @@
 
             if($u->num_rows==1)
             {
-                var_dump($u);
+                
                 $arr=array();
 
                 while($fila=mysql_fetch_assoc($u))
@@ -32,7 +32,9 @@
                 }
                 if($arr[0]['Rol_idRol']==2)
                 {
-                    echo "trabajador";
+                    $this->smarty->assign('Nav','Trabajador');
+                    $this->smarty->assign('title','Trabajador');
+                    $this->smarty->display('Trabajador.tpl');
                 }
                 if($arr[0]['Rol_idRol']==3)
                 {
@@ -42,10 +44,7 @@
                 {
                     echo "no rol";
                 }
-                echo"<br /><br />";
-                print_r($arr);
-                echo"<br /><br />";
-                echo "nombre: ".$arr[0]['Nombre']."<br />"."Correo: ".$arr[0]['Correo'];
+                
             }
             else if($u->num_rows>1)
             {
